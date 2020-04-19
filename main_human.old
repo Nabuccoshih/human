@@ -1,0 +1,31 @@
+#include <iostream>
+#include "human.h"
+
+int mmain()
+{
+	Human h1{"Hélène", "DUTHEIL", 56};
+	Human h15{"Rémi", "DUTHEIL", 23};
+	Human ch16{h15};
+	Human h2{"Christophe", "DUTHEIL", 52};
+	Human h3{};
+	Human ch4{h3};
+
+	std::cout << "----------------------------------------------------------" << std::endl;
+
+	h1.whois();
+	h1.setPrenom("Gilberte");
+	h1.whois();
+	h15.whois();
+	ch16.setPrenom("Anna");
+	ch16.whois();
+	h2.whois();
+	h3.whois();
+	h3.setAge(12);
+	h3.whois();
+	h3.getGenre();
+	ch4.whois();
+
+	return 0;
+}
+
+/* ---------------------------------- */
